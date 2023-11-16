@@ -30,7 +30,7 @@ video{
 	height: 100vh;
 	width: 100%;
 	background-color: rgb(14, 14, 14);
-	filter: opacity(0.90);
+	filter: opacity(0.5);
 }
 
 .hero-content {
