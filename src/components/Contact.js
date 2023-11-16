@@ -19,17 +19,23 @@ const Contact = () => {
         }));
       };
   
-    const handleSubmit = async (e) => {
-
+      const handleSubmit = async (e) => {
         e.preventDefault();
-       try {
-        await axios.post('https://poortfolio.onrender.com/api/submit',  data );
-        // console.log('User added:', response.data);
-        setData({ name: '', email: '', content: '', });
-      } catch (error) {
-        console.error('Error adding user:', error);
-      }
-    }
+      
+        try {
+          const response = await axios.post('https://portfolio-backend-dep.onrender.com/api/submit', data);
+          
+          // Check if the response status is successful (status code 2xx)
+          if (response.status >= 200 && response.status < 300) {
+            console.log('User added successfully:', response.data);
+            setData({ name: '', email: '', content: '' });
+          } else {
+            console.error('Error adding user. Status:', response.status);
+          }
+        } catch (error) {
+          console.error('Error adding user:', error);
+        }
+      };
 
     const fade = {
         opacity: 1,
