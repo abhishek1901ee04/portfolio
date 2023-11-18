@@ -12,7 +12,7 @@ import {
 import { DiJavascript1 } from "react-icons/di";
 import { VscJson } from "react-icons/vsc";
 import {
-	SiAdobephotoshop,
+	SiTailwindcss,
   SiFirebase,
 	SiStyledcomponents,
 	SiExpress,
@@ -102,7 +102,7 @@ export const SkillsData = [
 		icon: <SiVisualstudiocode />
 	},
 	{
-		name: "Photoshop",
-		icon: <SiAdobephotoshop />,
+		name: "Tailwind",
+		icon: <SiTailwindcss />,
 	},
 ];

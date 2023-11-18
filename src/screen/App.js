@@ -32,7 +32,7 @@ function App() {
       
       <div className="svg-wrapper">
       
-        <svg height="80" width="360" xmlns="http://www.w3.org/2000/svg">
+        <svg height="80" width="400" xmlns="http://www.w3.org/2000/svg">
           <rect className="shape" height="80" width="300" />
         </svg>        
         <motion.p variants={loadText} initial='hidden' animate='visible' className="text">Abhishek Trivedi</motion.p>

@@ -31,44 +31,34 @@ const Works = () => {
 						className='works-box'
 						initial={{ opacity: 0 }}
 						whileInView={fade}>
-						{WorkData.map((w, index) => {
-							return (
-								<div key={index}>
-									<Link to={w.site} target='_blank' className='work-link-group'>
-										<div className='works-card'>
-											<div className='works-container'>
-												<div className='top-work'>
-													<FiFolder className='work-folder' />
-													<div className='right'>
-														<Link
-															className='work-git'
-															to={w.gitlink}
-															target='_blank'>
-															<FiGithub />
-														</Link>
-														<Link
-															className='work-link'
-															to={w.site}
-															target='_blank'>
-															<IoOpenOutline />
-														</Link>
-													</div>
-												</div>
-												<div className='mid-work'>
-													<p className='work-title'>{w.title}</p>
-													<p className='work-desc'>{w.desc}</p>
-												</div>
-												<div className='bottom-work'>
-													{w.tech.map((e, index) => {
-														return <small key={index}>{e}</small>;
-													})}
-												</div>
-											</div>
-										</div>
-									</Link>
+					{WorkData.map((w, index) => (
+						<div key={index} className='work-link-group'>
+							<a href={w.site} target='_blank' rel='noopener noreferrer' className='works-card'>
+								<div className='works-container'>
+									<div className='top-work'>
+									<FiFolder className='work-folder' />
+									<div className='right'>
+										<a className='work-git' href={w.gitlink} target='_blank' rel='noopener noreferrer'>
+										<FiGithub />
+										</a>
+										<a className='work-link' href={w.site} target='_blank' rel='noopener noreferrer'>
+										<IoOpenOutline />
+										</a>
+									</div>
+									</div>
+									<div className='mid-work'>
+									<p className='work-title'>{w.title}</p>
+									<p className='work-desc'>{w.desc}</p>
+									</div>
+									<div className='bottom-work'>
+									{w.tech.map((e, index) => (
+										<small key={index}>{e}</small>
+									))}
+									</div>
 								</div>
-							);
-						})}
+							</a>
+						</div>
+						))}
 					</motion.div>
 				</div>
 			</div>
